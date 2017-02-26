@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Demo</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="js/controllers.js"></script>
+</head>
+<body>
+
+	<div ng-controller = "MyController">
+		<ul class="artistlist">
+			<li class="artist cf" ng-repeat="user in users.data">
+				<img ng-src="images/{{user.shortname}}_tn.jpg" alt="{{user.name}}">
+				<div class="info">
+				<h2>{{user.name}}</h2>
+				<h3>{{ user.reknown}}</h3>
+				<!-- <p>{{ user.bio}}</p> -->
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
