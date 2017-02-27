@@ -262,6 +262,9 @@ a.small {
   opacity: 1;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
+  border-bottom: none;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 15px rgba(0,0,0,0.3), 0 0 15px 5px rgba(0,0,0,0.3);
 }
 
 .artist img {
