@@ -2,7 +2,7 @@ var myApp = angular.module('myApp', ['ngRoute', 'artistControllers']);
 
 myApp.config(['$routeProvider', function ($routeProvider) {
 	$routeProvider
-		.when('/', {
+		.when('/list', {
 			templateUrl: 'pages/list.html',
 			controller: 'ListController'
 		})
@@ -11,6 +11,6 @@ myApp.config(['$routeProvider', function ($routeProvider) {
 			controller: 'DetailsController'
 		})
 		.otherwise({
-			redirectTo: '/'
+			redirectTo: '/list'
 		});
 }]);
