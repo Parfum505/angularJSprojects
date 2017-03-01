@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Courgette);
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	color: #000;
+	font-family: 'PT Sans',Arial,sans-serif;
+	font-weight: normal;
+	font-size: 20px;
+	text-rendering: optimizeSpeed;
+}
+.bg{
+	min-height: 100%;
+	padding: 15px 0;
+	position: relative;
+}
+.logo{
+	font-family: 'Courgette', cursive;
+	font-size: 2.2em;
+	font-weight: bold;
+	color: #e9cc00;
+	margin:0 0 40px;
+	text-shadow: 5px 5px 6px #000;
+}
+.logo span{
+	font-size: 0.5em;
+	color: #a2c5f1;
+}
+.weather_bg{
+	background: url(https://res.cloudinary.com/parfum505/image/upload/v1469887605/weather_bg_jv3eof.jpg) no-repeat center center;
+	background-size: cover;
+}
+.weather{
+	width: 80%;
+	font-family: 'Courgette', cursive;
+	margin: 1em auto 0;
+}
+.bg_white{
+	background-color: rgba(255, 255, 255, .8);
+	border-radius: 10px;
+	box-shadow: 4px 4px 11px #000;
+	margin: 0 10px 20px;
+	padding: 10px 0;
+}
+.city::after{
+	content: "";
+	display: block;
+	width: 40%;
+	height: 2px;
+	margin: 10px auto;
+	background-color: #09a3e7;
+}
+h2{
+	font-size: 1.3em;
+}
+.temp{
+	font-size: 1.6em;
+}
