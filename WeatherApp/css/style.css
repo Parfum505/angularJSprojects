@@ -45,6 +45,9 @@ html,body{
 	margin: 0 10px 20px;
 	padding: 10px 0;
 }
+.city{
+	font-size: 2em;
+}
 .city::after{
 	content: "";
 	display: block;
@@ -59,3 +62,6 @@ h2{
 .temp{
 	font-size: 1.6em;
 }
+.btn-info {
+	background-color: #207993;
+	border-color: #207993;}
