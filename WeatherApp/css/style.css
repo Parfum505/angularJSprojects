@@ -38,12 +38,23 @@ html,body{
 	font-family: 'Courgette', cursive;
 	margin: 1em auto 0;
 }
+.form-inline .form-group{
+	padding-left: 10px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.form-group .form-control{
+	width: calc(100% - 120px);
+}
 .bg_white{
 	background-color: rgba(255, 255, 255, .8);
 	border-radius: 10px;
 	box-shadow: 4px 4px 11px #000;
 	margin: 0 10px 20px;
-	padding: 10px 0;
+	padding: 10px;
+}
+.shadow{
+	box-shadow: 4px 4px 11px #000;
 }
 .city{
 	font-size: 2em;
@@ -58,10 +69,33 @@ html,body{
 }
 h2{
 	font-size: 1.3em;
+	margin: 0;
+}
+.img{
+	width: 100px;
 }
 .temp{
+	margin-top: 1.3em;
+}
+.temp span{
 	font-size: 1.6em;
 }
 .btn-info {
 	background-color: #207993;
-	border-color: #207993;}
+	border-color: #207993;
+	margin-right: 10px;
+}
+.margin-15{
+	margin-top: -15px;
+}
+@media (max-width: 767px){
+	.form-group .form-control{
+	width: 100%;
+	}
+	.btn-info {
+	margin-top: 10px;
+	}
+	.city{
+	font-size: 1.5em;
+}
+}

@@ -1,0 +1,13 @@
+<div class="bg_white  text-center">
+	<h2>{{convertDate({dt: weatherDay.dt}) | date : dateFormat}}</h2>
+	<div class="row margin-15">
+		<div class="col-xs-6">
+			<img class="img" ng-src="http://openweathermap.org/img/w/{{weatherDay.weather[0].icon}}.png" alt=""></div>
+		<div class="col-xs-6 temp">
+			<span>{{weatherDay.temp.day | number : 0}}&deg;</span>
+		</div>
+	</div>
+		<p>{{weatherDay.weather[0].description}}</p>
+
+
+</div>
