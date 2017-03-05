@@ -10,13 +10,19 @@
 <div class="row">
 	<div class="col-xs-10 col-xs-offset-1 col-md-offset-3 col-md-6">
 		<div class="bg_white  text-center">
-			<div class="city" >{{cityName}}</div>
+			<div class="city">{{cityName}},
+			<span class="temp_btn" ng-click="tempBtn()">
+				<span ng-class="{selected: !tempF}">F</span>
+				<span class="selected">/</span>
+				<span ng-class="{selected : tempF}">C</span>
+			</span>
+			</div>
 		</div>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4" ng-repeat="list in lists">
-		<weather-report weather-day="list" convert-date="date(dt)" date-format="MMM dd"></weather-report>
+		<weather-report weather-day="list" convert-date="date(dt)"  convert-temp="tempSwitch(temp)" date-format="MMM dd"></weather-report>
 	</div>
 </div>

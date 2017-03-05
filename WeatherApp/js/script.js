@@ -15,6 +15,7 @@ myApp.config(function ($routeProvider) {
 
 myApp.service('cityService', function() {
 	this.city = '';
+	this.tempF = false;
 });
 
 myApp.directive('weatherReport', function() {
@@ -25,6 +26,7 @@ myApp.directive('weatherReport', function() {
 		scope: {
 			weatherDay: '=',
 			convertDate: '&',
+			convertTemp: '&',
 			dateFormat: '@'
 		}
 	}
