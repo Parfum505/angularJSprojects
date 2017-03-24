@@ -5,8 +5,8 @@
 	<input type="text" ng-model="todo.name" ng-blur="editing = false;" ng-show="editing" ng-change="todo.edited = true" class="editing-label">
 	<div class="actions">
 	<a href="" ng-click="editing = !editing">Edit</a>
-	<a href="" ng-click="">Save</a>
-	<a href="" ng-click="" class="delete">Delete</a>
+	<a href="" ng-click="saveTodo(todo)">Save</a>
+	<a href="" ng-click="deleteTodo(todo, $index)" class="delete">Delete</a>
 	</div>
 </div>
 </div>
