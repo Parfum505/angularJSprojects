@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module("todoListApp")
 
 .service('dataService', ['$http', function($http){
@@ -10,6 +12,9 @@ angular.module("todoListApp")
 		console.log(todo.name);
 	};
 	this.saveTodo = function(todo) {
+		console.log(todo.name);
+	};
+		this.addTodo = function(todo) {
 		console.log(todo.name);
 	};
 

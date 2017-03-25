@@ -1,9 +1,10 @@
+'use strict';
+
 angular.module("todoListApp")
 
 .controller('toDoCtrl', ["$scope", "dataService", function($scope, dataService){
 
 	dataService.getData(function(respons){
-		//console.log(respons);
 		$scope.todos = respons.data;
 	});
 	$scope.deleteTodo = function(todo, index) {
@@ -12,7 +13,13 @@ angular.module("todoListApp")
 	};
 	$scope.saveTodo = function(todo) {
 		dataService.saveTodo(todo);
-		// $scope.todos.push();
+	};
+		$scope.addTodo = function(newTodo) {
+		if(newTodo && newTodo.name) {
+		dataService.addTodo(newTodo);
+		$scope.todos.push({"name": newTodo.name});
+		$scope.newTodo.name = "";
+		}
 	};
 
 }]);
