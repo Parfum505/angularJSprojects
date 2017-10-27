@@ -28,23 +28,15 @@ weatherControllers.controller('homeController', ['$scope', 'cityService','$locat
 		$scope.tempSwitch();
 	}
 
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(function(position) {
-
-		$scope.lat = position.coords.latitude;
-		$scope.long = position.coords.longitude;
-
-		$http.get('http://api.openweathermap.org/data/2.5/forecast/daily?lat='+$scope.lat+'&lon='+$scope.long+'&cnt=3&units=metric&APPID=0867a13b59c398d1edd05d49f440e4f0').then(function(respons) {
+		$http.get('http://api.openweathermap.org/data/2.5/forecast/daily?q=Krakow&cnt=3&units=metric&APPID=0867a13b59c398d1edd05d49f440e4f0').then(function(respons) {
 		//console.log(respons.data);
 		$scope.cityName = respons.data.city.name +' '+respons.data.city.country;
 		$scope.lists = respons.data.list;
-		console.log(respons.data);
+		//console.log(respons.data);
 	}, function(respons) {
 		$scope.cityName = respons.data.message;
 		// console.log(respons);
 			});
-		});
-	}
 }]);
 
 weatherControllers.controller('forecastController', ['$scope','$http', 'cityService', function($scope, $http, cityService) {
