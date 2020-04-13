@@ -20,15 +20,15 @@ weatherControllers.controller('homeController', ['$scope', 'cityService','$locat
 	$scope.tempSwitch = function(temp) {
 		if($scope.tempF) {
 			temp = 1.8 * temp + 32;
-		} else temp = temp;
+		}
 		return temp;
-	}
+	};
 	$scope.tempBtn = function() {
-		$scope.tempF = $scope.tempF ? false : true;
+		$scope.tempF = !$scope.tempF;
 		$scope.tempSwitch();
-	}
+	};
 
-		$http.get('http://api.openweathermap.org/data/2.5/forecast/daily?q=Krakow&cnt=3&units=metric&APPID=0867a13b59c398d1edd05d49f440e4f0').then(function(respons) {
+	axios.get('http://api.openweathermap.org/data/2.5/forecast/daily?q=Krakow&cnt=3&units=metric&APPID=0867a13b59c398d1edd05d49f440e4f0').then(function(respons) {
 		//console.log(respons.data);
 		$scope.cityName = respons.data.city.name +' '+respons.data.city.country;
 		$scope.lists = respons.data.list;
